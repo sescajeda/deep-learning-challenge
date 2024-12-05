@@ -96,10 +96,10 @@ Model: "sequential"
  Non-trainable params: 0 (0.00 B)
  
 Were you able to achieve the target model performance?
-Yes model 4 achieved the target model performance, accuracy above 0.75. 
+- Yes model 4 achieved the target model performance, accuracy above 0.75. 
 
 What steps did you take in your attempts to increase model performance?
-The first attempt to increase model performace was to add a 3rd hidden layer.  The model did not seem to change in response to that so the next step was to do some feature engineeering.  In this step the "INCOME_AMT" variable was converted from categories (intervals) to a single numerical value. In the feature engineering step the "NAME" variable was also kept and used a feature, the only change that was made was that insitutions with a count < 50 were grouped into an "OTHER" category.  
+- The first attempt to increase model performace was to add a 3rd hidden layer.  The model did not seem to change in response to that so the next step was to do some feature engineeering.  In this step the "INCOME_AMT" variable was converted from categories (intervals) to a single numerical value. In the feature engineering step the "NAME" variable was also kept and used a feature, the only change that was made was that insitutions with a count < 50 were grouped into an "OTHER" category.  
 
 # Summary: 
 Overall this analysis showed that when creating a model to solve a classification problem it is often not enough to add or change the hidden layers of a model but often times it is necessary to do some feature engineering and change the way different features are used in the model.  

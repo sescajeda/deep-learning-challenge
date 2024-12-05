@@ -9,10 +9,11 @@ The Starter_Code_Optimization_3.ipynb contains the code for the third attempt to
 The goal of this analysis is to create a model that identifies applicants for funding with the best chance of success.  In order to create the model we will create a binary classifier that has above 0.75 accuracy.  
 
 # Results: 
-Using bulleted lists and images to support your answers, address the following questions:
--Data Preprocessing
+Data Preprocessing
+
 What variable(s) are the target(s) for your model?
 - IS_SUCCESSFUL—Was the money used effectively
+
 What variable(s) are the features for your model?
 - EIN and NAME—Identification columns
 - APPLICATION_TYPE—Alphabet Soup application type
@@ -29,9 +30,9 @@ What variable(s) should be removed from the input data because they are neither 
 - In the initial models of this analysis both the EIN and NAME variable were removed because they appeared to be uncessery.  However, in the later models it was observed that the NAME variable could prove beneficial in training the model because there were institutions that had applied multiple times under different circumstances.  In the third model the NAME variable was kept as a feature but the EIN was still removed. 
 
 Compiling, Training, and Evaluating the Model
--How many neurons, layers, and activation functions did you select for your neural network model, and why?
-There were 4 models in this analysis and the rule activation function was used throughout.  For each model the number of nodes (neurons) for each layer was set equal to the numer of input features that the model was fed.
-Model 1 (Starter_Code) had 2 hidden layers, each with 43 neurons (the number of features the model was fed).  
+How many neurons, layers, and activation functions did you select for your neural network model, and why?
+- There were 4 models in this analysis and the rule activation function was used throughout.  For each model the number of nodes (neurons) for each layer was set equal to the numer of input features that the model was fed.
+- Model 1 (Starter_Code) had 2 hidden layers, each with 43 neurons (the number of features the model was fed).  
 Model: "sequential"
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
 ┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
@@ -45,7 +46,7 @@ Model: "sequential"
  Total params: 3,828 (14.95 KB)
  Trainable params: 3,828 (14.95 KB)
  Non-trainable params: 0 (0.00 B)
-Model 2 (Starter_Code_Optimization_1) had 3 hidden layers, each with 43 neurons (the number of features the model was fed).  For this model an extra layer was added in a attempt to optimize the model. 
+- Model 2 (Starter_Code_Optimization_1) had 3 hidden layers, each with 43 neurons (the number of features the model was fed).  For this model an extra layer was added in a attempt to optimize the model. 
 Model: "sequential"
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
 ┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
@@ -61,7 +62,7 @@ Model: "sequential"
  Total params: 5,720 (22.34 KB)
  Trainable params: 5,720 (22.34 KB)
  Non-trainable params: 0 (0.00 B)
-Model 3 (Starter_Code_Optimization_2) had 3 hidden layers, each with 35 neurons (the number of features the model was fed). For this model the number of neurons in each layer decreased because the "IMCOME_AMT" was convered from a categorical variable to a numerical variable. 
+- Model 3 (Starter_Code_Optimization_2) had 3 hidden layers, each with 35 neurons (the number of features the model was fed). For this model the number of neurons in each layer decreased because the "IMCOME_AMT" was convered from a categorical variable to a numerical variable. 
 Model: "sequential"
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
 ┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
@@ -77,7 +78,7 @@ Model: "sequential"
  Total params: 3,816 (14.91 KB)
  Trainable params: 3,816 (14.91 KB)
  Non-trainable params: 0 (0.00 B)
-Model 4 (Starter_Code_Optimization_3) had 3 hidden layers, each with 87 neurons (the number of features the model was fed). For this model the number of neurons in each layer increased from the previous model because the NAME variable was also used as a feature which was a categorical variable.
+- Model 4 (Starter_Code_Optimization_3) had 3 hidden layers, each with 87 neurons (the number of features the model was fed). For this model the number of neurons in each layer increased from the previous model because the NAME variable was also used as a feature which was a categorical variable.
 Model: "sequential"
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
 ┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃

@@ -28,8 +28,8 @@ What variable(s) are the features for your model?
 What variable(s) should be removed from the input data because they are neither targets nor features?
 - In the initial models of this analysis both the EIN and NAME variable were removed because they appeared to be uncessery.  However, in the later models it was observed that the NAME variable could prove beneficial in training the model because there were institutions that had applied multiple times under different circumstances.  In the third model the NAME variable was kept as a feature but the EIN was still removed. 
 
--Compiling, Training, and Evaluating the Model
-How many neurons, layers, and activation functions did you select for your neural network model, and why?
+Compiling, Training, and Evaluating the Model
+-How many neurons, layers, and activation functions did you select for your neural network model, and why?
 There were 4 models in this analysis and the rule activation function was used throughout.  For each model the number of nodes (neurons) for each layer was set equal to the numer of input features that the model was fed.
 Model 1 (Starter_Code) had 2 hidden layers, each with 43 neurons (the number of features the model was fed).  
 Model: "sequential"
@@ -93,8 +93,10 @@ Model: "sequential"
  Total params: 23,056 (90.06 KB)
  Trainable params: 23,056 (90.06 KB)
  Non-trainable params: 0 (0.00 B)
+ 
 Were you able to achieve the target model performance?
 Yes model 4 achieved the target model performance, accuracy above 0.75. 
+
 What steps did you take in your attempts to increase model performance?
 The first attempt to increase model performace was to add a 3rd hidden layer.  The model did not seem to change in response to that so the next step was to do some feature engineeering.  In this step the "INCOME_AMT" variable was converted from categories (intervals) to a single numerical value. In the feature engineering step the "NAME" variable was also kept and used a feature, the only change that was made was that insitutions with a count < 50 were grouped into an "OTHER" category.  
 

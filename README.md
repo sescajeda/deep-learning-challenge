@@ -1,5 +1,8 @@
 # deep-learning-challenge
+# Goal: 
+With knowledge of machine learning and neural networks, use the features in the provided dataset to create a binary classifier that can predict wheter applicants will be successful in funded by Alphabet Soup. 
 
+# Repo Description: 
 In this repo you will find Started_Code.ipynb file that contains the first model that was created for this data set.  In this first model the neural net that was created had 2 layers each with the number of nodes equal to the number of features the model was fed. This resulted in an accuracy for this model was below 0.75.
 The Starter_Code_Optimization_1.ipynb contains the code for the first attempt to optimize the model by adding a 3rd layer, each of the 3 layers had the same number of nodels (number of features fed to the model). This model also had an accuracy below 0.75. 
 The Starter_Code_Optimization_2.ipynb contains the code for the second attempt to optimize the model by keeping the 3 layers from the previous model as well as some feature engineering.  For this model the "INCOME_AMT" column which was a category was converted into a numerical feature by converting the intervals to a value from 1-8.  Even with those changes this model's accuracy was below 0.75. 
